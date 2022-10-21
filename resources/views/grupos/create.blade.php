@@ -3,7 +3,7 @@
 
 <x-section>  
     <x-slot:columnas>8</x-slot>
-    <x-slot:titulo>Nuevo Curso</x-slot>
+    <x-slot:titulo>Nuevo Grupo</x-slot>
     
     <form method="POST" action="{{ route('curso.store') }}">
         @csrf

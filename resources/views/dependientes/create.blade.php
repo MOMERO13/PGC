@@ -7,6 +7,7 @@
     
     <form method="POST" action="{{ route('dependiente.store') }}">
         @csrf
+        <h4 class="text-center">Datos personales</h4>
 
         <div class="row mb-3">
             <label for="nombre" class="col-md-4 col-form-label text-md-end">Nombre(s)</label>
@@ -39,6 +40,8 @@
         <div class="row mb-3">
             <label for="fecha_nacimiento" class="col-md-4 col-form-label text-md-end">Fecha de nacimiento</label>
 
+
+
             <div class="col-md-6">
                 <input id="fecha_nacimiento" type="date" class="form-control @error('fecha_nacimiento') is-invalid @enderror" name="fecha_nacimiento" value="{{ old('fecha_nacimiento') }}" max="{{date("Y-m-d", strtotime("-6 years"));}}" min="{{date("Y-m-d", strtotime("-100 years"));}}">   
 
@@ -65,11 +68,11 @@
             </div>
         </div>
 
-
+        <h4 class="text-center">Domicilio</h4>
         <div class="row mb-3">
-            <label for="estado" class="col-md-3 col-form-label text-md-end">Estado</label>
+            <label for="estado" class="col-md-2 col-form-label text-md-end">Estado</label>
 
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <input id="estado" type="text" class="form-control @error('estado') is-invalid @enderror" name="estado" value="{{ old('estado') }}" required>
 
                 @error('estado')
@@ -78,9 +81,9 @@
                     </span>
                 @enderror
             </div>
-            <label for="municipio" class="col-md-3 col-form-label text-md-end">Municipio</label>
+            <label for="municipio" class="col-md-2 col-form-label text-md-end">Municipio</label>
 
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <input id="municipio" type="text" class="form-control @error('municipio') is-invalid @enderror" name="municipio" value="{{ old('municipio') }}" required>
 
                 @error('municipio')
@@ -108,9 +111,9 @@
         </div>
 
         <div class="row mb-3">
-            <label for="colonia" class="col-md-4 col-form-label text-md-end">Colonia</label>
+            <label for="colonia" class="col-md-3 col-form-label text-md-end">Colonia</label>
 
-            <div class="col-md-6">
+            <div class="col-md-3">
                 <input id="colonia" type="text" class="form-control @error('colonia') is-invalid @enderror" name="colonia" value="{{ old('colonia') }}" required>
 
                 @error('colonia')
@@ -119,13 +122,9 @@
                     </span>
                 @enderror
             </div>
-        </div>
+            <label for="codigo_postal" class="col-md-3 col-form-label text-md-end">Código Postal</label>
 
-      
-        <div class="row mb-3">
-            <label for="codigo_postal" class="col-md-4 col-form-label text-md-end">Código Postal</label>
-
-            <div class="col-md-6">
+            <div class="col-md-3">
                 <input id="codigo_postal" type="text" class="form-control @error('codigo_postal') is-invalid @enderror" name="codigo_postal" value="{{ old('codigo_postal') }}" required>
 
                 @error('codigo_postal')
@@ -135,6 +134,8 @@
                 @enderror
             </div>
         </div>
+
+   
 
         <div class="row mb-3">
             <label for="numero_exterior" class="col-md-3 col-form-label text-md-end">Número Exterior</label>
@@ -162,7 +163,7 @@
 
         </div>
 
-
+        <h4 class="text-center">Datos de contacto</h4>
         <div class="row mb-3">
             <label for="numero_telefono" class="col-md-4 col-form-label text-md-end">Número de Telefono</label>
 
@@ -179,8 +180,7 @@
 
         <div class="row mb-0">
             <div class="col-md-6 offset-md-4">
-                <button type="submit" class="btn btn-primary">
-                    {{ __('Register') }}
+                <button type="submit" class="btn btn-primary">Guardar
                 </button>
             </div>
         </div>

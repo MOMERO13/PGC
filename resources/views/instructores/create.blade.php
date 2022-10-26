@@ -42,7 +42,7 @@
             <label for="rfc" class="col-md-4 col-form-label text-md-end">RFC</label>
 
             <div class="col-md-6">
-                <input id="rfc" type="text" class="form-control @error('rfc') is-invalid @enderror" name="rfc" value="{{ old('rfc') }}" required >
+                <input id="rfc" type="text" class="form-control @error('rfc') is-invalid @enderror" name="rfc" value="{{ old('rfc') }}"  required >
 
                 @error('rfc')
                     <span class="invalid-feedback" role="alert">
@@ -61,7 +61,13 @@
         </div>
     </form>
 
-
+<script> 
+    var element = document.getElementById('rfc');
+    var maskOptions = { 
+     mask: 'aaaa000000***'
+    };
+    var mask = IMask(element, maskOptions);
+</script>
 </x-section>
 
 

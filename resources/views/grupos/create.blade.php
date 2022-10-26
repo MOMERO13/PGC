@@ -5,7 +5,7 @@
     <x-slot:columnas>8</x-slot>
     <x-slot:titulo>Nuevo Grupo</x-slot>
     
-    <form method="POST" action="{{ route('curso.store') }}">
+    <form method="POST" action="{{ route('grupo.store') }}">
         @csrf
         <div class="row mb-3">
             <label for="curso_id" class="col-md-4 col-form-label text-md-end">Nombre del curso</label>
@@ -71,26 +71,6 @@
              
         </div>
     
-
-
-
- {{--
-    <div class="row mb-3">
-        <label for="hora_inicio" class="col-md-4 col-form-label text-md-end">Hora de inicio</label>
-
-        <div class="col-md-6">
-            <input id="hora_inicio" type="time" class="form-control @error('hora_inicio') is-invalid @enderror" name="hora_inicio" value="{{ old('hora_inicio') }}" required >
-
-            @error('hora_inicio')
-                <span class="invalid-feedback" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
-            @enderror
-        </div>
-    </div>
-    --}}
-
-
     <div class="row mb-3">
         <label for="hora_inicio" class="col-md-4 col-form-label text-md-end">Hora de inicio</label>
 
@@ -119,6 +99,23 @@
         </div>
     </div>
 
+
+    <div class="row mb-3">
+        <label for="capacidad" class="col-md-4 col-form-label text-md-end">Capacidad</label>
+
+        <div class="col-md-6">
+            <input id="capacidad" type="text" class="form-control @error('capacidad') is-invalid @enderror" name="capacidad" value="{{ old('capacidad') }}" required >
+
+            @error('capacidad')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
+        </div>
+    </div>
+
+
+    <!--hacer select y  recear los pasos del controller (Nombre del curso)!-->
     <div class="row mb-3">
         <label for="instructor_id" class="col-md-4 col-form-label text-md-end">Instructor</label>
 
@@ -136,9 +133,7 @@
 
         <div class="row mb-0">
             <div class="col-md-6 offset-md-4">
-                <button type="submit" class="btn btn-primary">
-                    {{ __('Register') }}
-                </button>
+                <button type="submit" class="btn btn-primary">Guardar</button>
             </div>
         </div>
     </form>

@@ -40,7 +40,7 @@
             <label for="fecha_nacimiento" class="col-md-4 col-form-label text-md-end">Fecha de nacimiento</label>
 
             <div class="col-md-6">
-                <input id="fecha_nacimiento" type="date" class="form-control @error('fecha_nacimiento') is-invalid @enderror" name="fecha_nacimiento" value="{{ old('fecha_nacimiento') }}">
+                <input id="fecha_nacimiento" type="date" class="form-control @error('fecha_nacimiento') is-invalid @enderror" name="fecha_nacimiento" value="{{ old('fecha_nacimiento') }}" max="{{date("Y-m-d", strtotime("-6 years"));}}" min="{{date("Y-m-d", strtotime("-100 years"));}}">   
 
                 @error('fecha_nacimiento')
                     <span class="invalid-feedback" role="alert">

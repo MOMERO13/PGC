@@ -56,19 +56,20 @@
             </div>
         </div>
 
- @foreach (["L","M","X","J","V"] as $dia)
-  
 
+        <div class="row mb-3">
+            <label  class="col-md-4 col-form-label text-md-end">Dias  </label>
+            <div class="col-md-6">
+                @foreach (["L","M","X","J","V"] as $dia)
  
- 
-<div class="form-check">
-    <input class="form-check-input" type="checkbox" value="{{$dia}}" id="{{$dia}}" name="dias[]">
-    <label class="form-check-label" for="{{$dia}}">
-        {{$dia}}
-    </label>
-  </div>
-
- @endforeach
+                <div class="form-check form-check-inline" >
+                        <input class="form-check-input" type="checkbox" value="{{$dia}}" id="{{$dia}}" name="dias[]">
+                        <label class="form-check-label" for="{{$dia}}">{{$dia}}</label>
+                </div>
+             @endforeach
+            </div>
+             
+        </div>
 
 
 

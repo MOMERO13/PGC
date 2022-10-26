@@ -70,27 +70,27 @@
             </div>
              
         </div>
-
+    
 
 
 
  {{--
-        <div class="row mb-3">
-            <label for="dias" class="col-md-4 col-form-label text-md-end">Dias</label>
+    <div class="row mb-3">
+        <label for="hora_inicio" class="col-md-4 col-form-label text-md-end">Hora de inicio</label>
 
-            <div class="col-md-6">
-                <input id="dias" type="text" class="form-control @error('dias') is-invalid @enderror" name="dias" value="{{ old('dias') }}" required >
+        <div class="col-md-6">
+            <input id="hora_inicio" type="time" class="form-control @error('hora_inicio') is-invalid @enderror" name="hora_inicio" value="{{ old('hora_inicio') }}" required >
 
-                @error('dias')
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                @enderror
-            </div>
+            @error('hora_inicio')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
         </div>
+    </div>
     --}}
 
-    
+
     <div class="row mb-3">
         <label for="hora_inicio" class="col-md-4 col-form-label text-md-end">Hora de inicio</label>
 

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Costo;
+use App\Models\Curso;
 use Illuminate\Http\Request;
 
 class CostoController extends Controller

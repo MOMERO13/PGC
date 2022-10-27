@@ -38,7 +38,13 @@ class CursoController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->request);
+        //dd($request->except(["_token"]));
+        $curso=Curso::create(
+            $request->except(["_token"])
+        );
+  
+        return redirect()->route('curso.index')->with('status','Curso creado');
+
         //
     }
 

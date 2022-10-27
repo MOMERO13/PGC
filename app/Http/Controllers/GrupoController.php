@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Grupo;
 use App\Models\Curso;
+use App\Models\Instructor;
 use Illuminate\Http\Request;
 
 class GrupoController extends Controller
@@ -25,6 +26,8 @@ class GrupoController extends Controller
      */
     public function create()
     {
+        $instructores = Instructor::all();
+        $data['instructores']=$instructores;
         $cursos = Curso::all();
         $data['cursos']=$cursos;
         return view('grupos.create',$data);

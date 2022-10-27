@@ -53,7 +53,7 @@
 
         <div class="row mb-0">
             <div class="col-md-6 offset-md-4">
-Cambio d                <button type="submit" class="btn btn-primary">Guardar
+                    <button type="submit" class="btn btn-primary">Guardar
                 </button>
             </div>
         </div>

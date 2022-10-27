@@ -35,7 +35,7 @@
 
 
                 <select class="form-select" id="periodo" name="periodo" required autofocus>
-                    <option selected>Elige un periodo</option>
+                    <option selected>Elija un periodo</option>
                     
                     <option value="{{ date('Y')-1}}">{{ date('Y')-1}}</option>
                     <option value="{{ date('Y')}}">{{ date('Y')}}</option>

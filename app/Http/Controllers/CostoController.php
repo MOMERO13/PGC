@@ -25,7 +25,9 @@ class CostoController extends Controller
      */
     public function create()
     {
-        return view('costos.create');
+        $cursos = Curso::all();
+        $data['cursos']=$cursos;
+        return view('costos.create',$data);
         //
     }
 

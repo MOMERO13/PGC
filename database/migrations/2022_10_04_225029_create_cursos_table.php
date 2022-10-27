@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('nombre');
             $table->string('objetivo')->nullable();
             $table->string('descripcion')->nullable();
+            $table->timestamps();
         });
     }
 

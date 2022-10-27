@@ -41,8 +41,12 @@ class CostoController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->request);
-        //
+        //dd($request->request);
+        $costo=Costo::create(
+            $request->except(["_token"])
+        );
+  
+        return redirect()->route('costo.index')->with('status','Costo insertado');
     }
 
     /**

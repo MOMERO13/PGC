@@ -35,7 +35,7 @@ class HomeController extends Controller
         $datos=[];
  
         
-        return view('Costos.create',$datos);
+        return view('home',$datos);
 
     }
 }

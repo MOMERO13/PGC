@@ -15,7 +15,9 @@ class CostoController extends Controller
      */
     public function index()
     {
-        //
+        $costos = Costo::orderBy("periodo","ASC") ->get();
+        $data['costos']=$costos;
+        return view('costos.index',$data);
     }
 
     /**

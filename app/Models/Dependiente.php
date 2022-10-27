@@ -9,4 +9,22 @@ class Dependiente extends Model
 {
     use HasFactory;
     protected $table = 'dependientes';
+
+    protected $fillable = [
+        'nombre',
+        'apellidos',
+        'fecha_nacimiento',
+        'curp',
+        'estado',
+        'municipio',
+        'codigo_postal',
+        'colonia',
+        'calle',
+        'numero_exterior',
+        'numero_interior',
+        'numero_telefono',		
+    ];
+
+
+    											
 }

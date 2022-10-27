@@ -9,4 +9,10 @@ class Costo extends Model
 {
     use HasFactory;
     protected $table = 'costos';
+
+    protected $fillable = [
+        'periodo',
+        'costo_derechohabiente',
+        'costo_publico',
+    ];
 }

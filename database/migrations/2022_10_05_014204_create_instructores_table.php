@@ -14,10 +14,11 @@ return new class extends Migration
     public function up()
     {
         Schema::create('instructores', function (Blueprint $table) {
-            $table->BigInteger('id')->unique();
+            $table->id();
             $table->string('nombre');
             $table->string('apellidos');
             $table->string('rfc');
+            $table->timestamps();
         });
     }
 

@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('dependientes', function (Blueprint $table) {
-            $table->BigInteger('id')->unique();
+            $table->id();
             $table->unsignedBigInteger('usuario_id');
             $table->string('nombre');
             $table->string('apellidos');
@@ -28,6 +28,7 @@ return new class extends Migration
             $table->integer('numero_exterior')->nullable();
             $table->integer('numero_interior')->nullable();
             $table->integer('numero_telefono')->nullable();
+            $table->timestamps();
         });
     }
 

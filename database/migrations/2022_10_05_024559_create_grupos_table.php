@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('grupos', function (Blueprint $table) {
-            $table->BigInteger('id')->unique();
+            $table->id();
             $table->unsignedBigInteger('curso_id');
             $table->unsignedBigInteger('instructor_id');
             $table->timestamp('fecha_inicio')->useCurrent();
@@ -23,7 +23,7 @@ return new class extends Migration
             $table->time('hora_inicio');
             $table->time('hora_fin');
             $table->integer('capacidad');
-
+            $table->timestamps();
         });
     }
 

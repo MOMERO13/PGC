@@ -14,12 +14,12 @@ return new class extends Migration
     public function up()
     {
         Schema::create('costos', function (Blueprint $table) {
-            $table->BigInteger('id')->unique();
+            $table->id();
             $table->unsignedBigInteger('curso_id');   
             $table->year('periodo');
             $table->double('costo_derechohabiente');
             $table->double('costo_publico');
-           
+            $table->timestamps();
         });
     }
 

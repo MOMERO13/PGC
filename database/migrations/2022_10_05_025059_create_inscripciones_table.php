@@ -14,10 +14,10 @@ return new class extends Migration
     public function up()
     {
         Schema::create('inscripciones', function (Blueprint $table) {
-            $table->BigInteger('id')->unique();
+            $table->id();
             $table->unsignedBigInteger('grupo_id');
             $table->unsignedBigInteger('dependiente_id');
-
+            $table->timestamps();
         });
     }
 

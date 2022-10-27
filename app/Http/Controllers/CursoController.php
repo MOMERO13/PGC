@@ -14,7 +14,9 @@ class CursoController extends Controller
      */
     public function index()
     {
-        //
+       $cursos=Curso::all();
+       $data['cursos']=$cursos;
+       return view ('cursos.index',$data);
     }
 
     /**

@@ -115,21 +115,25 @@
     </div>
 
 
-    <!--hacer select y  recear los pasos del controller (Nombre del curso)!-->
+
     <div class="row mb-3">
         <label for="instructor_id" class="col-md-4 col-form-label text-md-end">Instructor</label>
 
         <div class="col-md-6">
-            <input id="instructor_id" type="text" class="form-control @error('instructor_id') is-invalid @enderror" name="instructor_id" value="{{ old('instructor_id') }}" required >
+            <select class="form-select" id="instructor_id" name="instructor_id" required>
+                <option selected>Elija un instructor</option>
+                @forelse ($instructores as $item)
+                    <option value="{{$item->id}}"> {{$item->nombre}}</option> 
+                   @empty
+                   <option>No hay instructores</option>
 
-            @error('instructor_id')
-                <span class="invalid-feedback" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
-            @enderror
+                @endforelse
+                
+              </select>
+
+
         </div>
     </div>
-
 
         <div class="row mb-0">
             <div class="col-md-6 offset-md-4">

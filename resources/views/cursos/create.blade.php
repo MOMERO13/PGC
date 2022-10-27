@@ -26,7 +26,7 @@
             <label for="objetivo" class="col-md-4 col-form-label text-md-end">Objetivos</label>
 
             <div class="col-md-6">
-                <input id="objetivo" type="text" class="form-control @error('objetivo') is-invalid @enderror" name="objetivo" value="{{ old('objetivo') }}" >
+                <textarea id="objetivo" type="text" class="form-control @error('objetivo') is-invalid @enderror" name="objetivo" value="{{ old('objetivo') }}" ></textarea>
 
                 @error('objetivo')
                     <span class="invalid-feedback" role="alert">
@@ -40,7 +40,7 @@
             <label for="descripcion" class="col-md-4 col-form-label text-md-end">Descripcion</label>
 
             <div class="col-md-6">
-                <input id="descripcion" type="text" class="form-control @error('descripcion') is-invalid @enderror" name="descripcion" value="{{ old('descripcion') }}">
+                <textarea id="descripcion" type="text" class="form-control @error('descripcion') is-invalid @enderror" name="descripcion" value="{{ old('descripcion') }}"> </textarea>
 
                 @error('descripcion')
                     <span class="invalid-feedback" role="alert">
@@ -53,7 +53,7 @@
 
         <div class="row mb-0">
             <div class="col-md-6 offset-md-4">
-                <button type="submit" class="btn btn-primary">Guardar
+Cambio d                <button type="submit" class="btn btn-primary">Guardar
                 </button>
             </div>
         </div>

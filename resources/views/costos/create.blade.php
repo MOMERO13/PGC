@@ -9,6 +9,26 @@
         @csrf
 
         <div class="row mb-3">
+            <label for="curso_id" class="col-md-4 col-form-label text-md-end">Nombre del curso</label>
+    
+            <div class="col-md-6">
+                <select class="form-select" id="curso_id" name="curso_id" required>
+                    <option selected>Elija un curso</option>
+                    @forelse ($cursos as $item)
+                        <option value="{{$item->id}}"> {{$item->nombre}}</option> 
+                       @empty
+                       <option>No hay cursos dados de alta</option>
+
+                    @endforelse
+                    
+                  </select>
+
+
+            </div>
+        </div>
+
+
+        <div class="row mb-3">
             <label for="periodo" class="col-md-4 col-form-label text-md-end">Periodo</label>
 
             <div class="col-md-6">

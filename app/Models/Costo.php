@@ -11,6 +11,7 @@ class Costo extends Model
     protected $table = 'costos';
 
     protected $fillable = [
+        'curso_id',
         'periodo',
         'costo_derechohabiente',
         'costo_publico',

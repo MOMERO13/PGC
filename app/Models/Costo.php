@@ -16,4 +16,10 @@ class Costo extends Model
         'costo_derechohabiente',
         'costo_publico',
     ];
+
+    public function curso()
+    {
+        return $this->belongsTo(Curso::class);
+    }
+
 }

@@ -2,7 +2,10 @@
     <div class="row justify-content-center">
         <div class="col-md-{{$columnas??'8'}}">
             <div class="card">
-                <div class="card-header">{{$titulo?? ' '}}</div>
+                <div class="card-header">
+                   <h3> {{$titulo?? ' '}} </h3>
+                    
+                </div>
 
                 <div class="card-body">
                     @if (session('status'))

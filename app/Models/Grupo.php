@@ -11,12 +11,13 @@ class Grupo extends Model
     use HasFactory;
     protected $table = 'grupos';
     protected $fillable = [
-        
+        'curso_id',
+        'instructor_id',
         'fecha_inicio',
         'fecha_fin',
         'dias',
         'hora_inicio',
         'hora_fin',
-        'capacidad'				
+        'capacidad',				
     ];
 }

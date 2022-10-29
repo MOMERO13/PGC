@@ -5,7 +5,7 @@
     <x-slot:columnas>8</x-slot>
     <x-slot:titulo>Nuevo Instructor</x-slot>
     
-    <form method="POST" action="{{ route('curso.store') }}">
+    <form method="POST" action="{{ route('instructor.store') }}">
         @csrf
 
         <div class="row mb-3">

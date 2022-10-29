@@ -39,8 +39,12 @@ class InstructorController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->request);
-        //
+         //dd($request->request);
+         $instructor=Instructor::create(
+            $request->except(["_token"])
+        );
+  
+        return redirect()->route('instructor.index')->with('status','Instructor insertado');
     }
 
     /**

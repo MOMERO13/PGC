@@ -3,7 +3,12 @@
 
 <x-section>  
     <x-slot:columnas>10</x-slot>
-    <x-slot:titulo>Listado de Cursos</x-slot>
+    <x-slot:titulo>Listado de Cursos
+        <div class="float-end">
+            <a class="btn btn-outline-success" href="{{route('curso.create')}}" role="button">Nuevo curso</a>
+           </div>
+
+    </x-slot>
 
     <table class="table">
         <thead>

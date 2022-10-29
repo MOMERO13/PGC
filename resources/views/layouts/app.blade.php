@@ -36,26 +36,24 @@
 
 
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('curso.create') }}"> Cursos </a>
+                        <a class="nav-link" href="{{ route('curso.index') }}"> Cursos </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('costo.index') }}"> Costos </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('instructor.index') }}"> Instructores </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('grupo.index') }}"> Grupos </a>
                     </li>
 
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('dependiente.create') }}"> Dependientes </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('grupo.create') }}"> Grupos </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('instructor.create') }}"> Instructores </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('costo.create') }}"> Costos </a>
-                    </li>
-        
-                    
+                    </li>        
 
                     @endauth
 

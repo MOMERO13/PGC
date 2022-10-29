@@ -5,7 +5,7 @@
     <x-slot:columnas>10</x-slot>
     <x-slot:titulo>Listado de Costos
         <div class="float-end">
-            <a class="btn btn-outline-success" href="{{route('costo.create')}}" role="button">Nuevo</a>
+            <a class="btn btn-outline-success" href="{{route('costo.create')}}" role="button">Nuevo costo</a>
            </div>
     </x-slot>
     

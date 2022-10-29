@@ -16,6 +16,12 @@ class GrupoController extends Controller
      */
     public function index()
     {
+        
+        $grupos = Grupo::all();
+        $data['grupos']=$grupos;
+        //dd($data);
+        return view('grupos.index',$data);
+        
         //
     }
 

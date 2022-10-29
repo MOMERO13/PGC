@@ -14,6 +14,9 @@ class InstructorController extends Controller
      */
     public function index()
     {
+        $instructores = Instructor::all();
+        $data['instructores']=$instructores;
+        return view('instructores.index',$data);
         //
     }
 

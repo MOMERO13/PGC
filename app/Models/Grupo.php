@@ -20,4 +20,26 @@ class Grupo extends Model
         'hora_fin',
         'capacidad',				
     ];
+
+
+// o en su defecto...
+    // Guardar en formato "LMX"
+    // Leer en formato "LMX"
+    protected function dias(): Attribute
+    {
+        return Attribute::make(
+            get: fn ($value) => $value,
+            set: fn ($value) => implode($value),
+        );
+    }
+
+    
+    public function curso()
+    {
+        return $this->belongsTo(Curso::class);
+    }
+    public function instructor()
+    {
+        return $this->belongsTo(Instructor::class);
+    }
 }

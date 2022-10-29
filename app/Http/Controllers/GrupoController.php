@@ -49,8 +49,12 @@ class GrupoController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->request);
-        //
+      //dd($request->request);
+      
+      $grupo=Grupo::create(
+        $request->except(["_token"]));
+
+    return redirect()->route('grupo.index')->with('status','Grupo creado');
     }
 
     /**

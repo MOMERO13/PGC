@@ -16,6 +16,7 @@
                 <th>#</th>
                 <th>Nombre</th>
                 <th>Objetivo</th>
+                <th>Descripcion</th>
                 <th>Opciones</th>
             </tr>
         </thead>
@@ -26,6 +27,7 @@
                 <td>{{$loop->iteration}}</td>
                 <td>{{$item->nombre}}</td>
                 <td>{{$item->objetivo}}</td>
+                <td>{{$item->descripcion}}</td>
                 <td> --</td>
             </tr>
             @empty

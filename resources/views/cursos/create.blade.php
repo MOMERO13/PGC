@@ -3,7 +3,11 @@
 
 <x-section>  
     <x-slot:columnas>8</x-slot>
-    <x-slot:titulo>Nuevo Curso</x-slot>
+    <x-slot:titulo>Nuevo Curso
+        <div class="float-end">
+            <a class="btn btn-outline-success" href="{{route('curso.index')}}" role="button">Listado de Cursos</a>
+           </div>
+    </x-slot>
     
     <form method="POST" action="{{ route('curso.store') }}">
         @csrf

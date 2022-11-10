@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Model;
+use Carbon\Carbon;
 
 class Grupo extends Model
 {
@@ -33,7 +34,22 @@ class Grupo extends Model
         );
     }
 
+    protected function horaInicio(): Attribute
+    {
+        return Attribute::make(
+            get: fn ($value) => Carbon::createFromFormat('H:i:s',$value)->format('H:i'),
+       
+        );
+    }
     
+    protected function horaFin(): Attribute
+    {
+        return Attribute::make(
+            get: fn ($value) => Carbon::createFromFormat('H:i:s',$value)->format('H:i'),
+       
+        );
+    }
+
     public function curso()
     {
         return $this->belongsTo(Curso::class);

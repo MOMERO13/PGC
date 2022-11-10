@@ -3,7 +3,7 @@
 
 <x-section>  
     <x-slot:columnas>10</x-slot>
-    <x-slot:titulo>Listado de grupos
+    <x-slot:titulo>Listado de Grupos
         <div class="float-end">
             <a class="btn btn-outline-success" href="{{route('grupo.create')}}" role="button">Nuevo grupo</a>
            </div>
@@ -31,12 +31,13 @@
             <tr>
                 <td>{{$item->instructor->nombre}}</td>
                 <td>{{$item->curso->nombre}}</td>
-                <td>{{$item->fecha_inicio}}</td>
-                <td>{{$item->fecha_fin}}</td>
+                <td>{{$item->fecha_inicio->format("m-d-Y")}}</td>
+                <td>{{$item->fecha_fin->format("m-d-Y")}}</td>
                 <td>{{$item->dias}}</td>
                 <td>{{$item->hora_inicio}}</td>
                 <td>{{$item->hora_fin}}</td>
                 <td>{{$item->capacidad}}</td>
+                <td>{{$item->inscritos->count()}}</td>
                 <td> --</td>
             </tr>
             @empty

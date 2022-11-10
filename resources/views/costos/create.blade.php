@@ -3,7 +3,11 @@
 
 <x-section>  
     <x-slot:columnas>8</x-slot>
-    <x-slot:titulo>Costos de Cursos</x-slot>
+    <x-slot:titulo>Nuevo Costo
+        <div class="float-end">
+            <a class="btn btn-outline-success" href="{{route('costo.index')}}" role="button">Listado de Costos</a>
+           </div>
+    </x-slot>
     
     <form method="POST" action="{{ route('costo.store') }}">
         @csrf

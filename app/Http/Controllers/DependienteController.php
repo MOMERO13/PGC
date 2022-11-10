@@ -15,6 +15,14 @@ class DependienteController extends Controller
      */
     public function index()
     {
+        $dependientes=Auth::user()->dependientes;
+        //$dependientes=Dependiente::all();
+        $redirigir=(count($dependientes)==0);
+        //dd($redirigir);
+        $data['dependientes']=$dependientes;
+        if ($redirigir){
+            return redirect()->route('dependiente.create')->with('status','Da de alta tu información');
+        }
        
         //
     }

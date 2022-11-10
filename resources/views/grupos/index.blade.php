@@ -5,7 +5,7 @@
     <x-slot:columnas>10</x-slot>
     <x-slot:titulo>Listado de Grupos
         <div class="float-end">
-            <a class="btn btn-outline-success" href="{{route('grupo.create')}}" role="button">Nuevo grupo</a>
+            <a class="btn btn-outline-success" href="{{route('grupo.create')}}" role="button">Nuevo Grupo</a>
            </div>
 
     </x-slot>

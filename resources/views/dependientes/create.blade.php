@@ -3,7 +3,11 @@
 
 <x-section>  
     <x-slot:columnas>8</x-slot>
-    <x-slot:titulo>Nuevo dependiente</x-slot>
+    <x-slot:titulo>Nuevo Dependiente
+        <div class="float-end">
+            <a class="btn btn-outline-success" href="{{route('dependiente.index')}}" role="button">Listado de Dependientes</a>
+           </div>
+    </x-slot>
     
     <form method="POST" action="{{ route('dependiente.store') }}">
         @csrf

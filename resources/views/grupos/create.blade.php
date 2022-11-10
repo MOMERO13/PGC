@@ -3,7 +3,11 @@
 
 <x-section>  
     <x-slot:columnas>8</x-slot>
-    <x-slot:titulo>Nuevo Grupo</x-slot>
+    <x-slot:titulo>Nuevo Grupo
+        <div class="float-end">
+            <a class="btn btn-outline-success" href="{{route('grupo.index')}}" role="button">Listado de Grupos</a>
+           </div>
+    </x-slot>
     
     <form method="POST" action="{{ route('grupo.store') }}">
         @csrf

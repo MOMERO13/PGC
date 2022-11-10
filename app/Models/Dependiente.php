@@ -28,6 +28,9 @@ class Dependiente extends Model
         'fecha_nacimiento'=>'datetime:Y-m-d'
     ];
 
-
+    public function usuario()
+    {
+        return $this->belongsTo(User::class,"usuario_id");
+    }
     											
 }

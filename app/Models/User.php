@@ -25,6 +25,11 @@ class User extends Authenticatable
         
     ];
 
+    public function dependientes()
+    {
+        return $this->hasMany(Dependiente::class, 'usuario_id');
+    }
+
     /**
      * The attributes that should be hidden for serialization.
      *

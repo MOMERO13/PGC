@@ -24,7 +24,7 @@ class DependienteController extends Controller
             return redirect()->route('dependiente.create')->with('status','Da de alta tu información');
         }
        
-        //
+        return view ('dependientes.index',$data);
     }
 
     /**

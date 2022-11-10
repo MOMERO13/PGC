@@ -21,6 +21,7 @@
                 <th>Hora de inicio</th>
                 <th>Hora de fin</th>
                 <th>Capacidad</th>	
+                <th>Inscritos</th>	
                 <th>Opciones</th>
             </tr>
         </thead>

@@ -2,8 +2,8 @@
 @section('content')
 
 <x-section>  
-    <x-slot:columnas>10</x-slot>
-    <x-slot:titulo>Listado de instructores
+    <x-slot:columnas>8</x-slot>
+    <x-slot:titulo>Listado de Instructores
         <div class="float-end">
             <a class="btn btn-outline-success" href="{{route('instructor.create')}}" role="button">Nuevo instructor</a>
            </div>
@@ -13,8 +13,7 @@
     <table class="table">
         <thead>
             <tr>
-                <th>Nombre</th>
-                <th>Apellidos</th>			
+                <th>Nombre Completo</th>		
                 <th>RFC</th>
                 <th>Opciones</th>
             </tr>
@@ -23,14 +22,14 @@
 
             @forelse ($instructores as $item)
             <tr>			
-                <td>{{$item->nombre}}</td>
-                <td>{{$item->apellidos}}</td>
-                <td>${{$item->rfc}}</td>
+                <td>{{$item->nombre}} {{$item->apellidos}}</td>
+              
+                <td>{{$item->rfc}}</td>
                 <td>--</td>
             </tr>
             @empty
                <tr>
-                <td colspan="5">No hay instructores registrados</td>
+                <td colspan="3">No hay instructores registrados</td>
                </tr> 
             @endforelse
 

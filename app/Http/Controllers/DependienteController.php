@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Dependiente;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class DependienteController extends Controller
 {

@@ -23,7 +23,7 @@ class DependienteController extends Controller
         if ($redirigir){
             return redirect()->route('dependiente.create')->with('status','Da de alta tu información');
         }
-       
+
         return view ('dependientes.index',$data);
     }
 
@@ -46,8 +46,11 @@ class DependienteController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->request);
-        //
+        $form=$request->except (["_token"]);
+        $form["usuario_id"]=Auth::user()->id;
+       $dependiente=Dependiente::create($form);
+    
+        return redirect()->route('dependiente.index')->with('status','Dependiente creado');
     }
 
     /**

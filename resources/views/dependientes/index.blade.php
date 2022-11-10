@@ -5,7 +5,7 @@
     <x-slot:columnas>10</x-slot>
     <x-slot:titulo>Listado de Dependientes
         <div class="float-end">
-            <a class="btn btn-outline-success" href="{{route('dependiente.create')}}" role="button">Nuevo dependiente</a>
+            <a class="btn btn-outline-success" href="{{route('dependiente.create')}}" role="button">Nuevo Dependiente</a>
            </div>
 
     </x-slot>

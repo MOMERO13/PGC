@@ -42,4 +42,17 @@ class Grupo extends Model
     {
         return $this->belongsTo(Instructor::class);
     }
+
+    public function inscritos()
+    {
+        return $this->hasMany(Inscripcion::class);
+    }
+
+    protected $casts=[
+        'fecha_inicio'=>'datetime:Y-m-d',
+        'fecha_fin'=>'datetime:Y-m-d'
+    ];
+    
+
+
 }

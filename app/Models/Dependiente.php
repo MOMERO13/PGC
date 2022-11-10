@@ -11,6 +11,7 @@ class Dependiente extends Model
     protected $table = 'dependientes';
 
     protected $fillable = [
+        'usuario_id',
         'nombre',
         'apellidos',
         'fecha_nacimiento',

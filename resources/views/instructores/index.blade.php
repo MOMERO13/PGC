@@ -5,7 +5,7 @@
     <x-slot:columnas>8</x-slot>
     <x-slot:titulo>Listado de Instructores
         <div class="float-end">
-            <a class="btn btn-outline-success" href="{{route('instructor.create')}}" role="button">Nuevo instructor</a>
+            <a class="btn btn-outline-success" href="{{route('instructor.create')}}" role="button">Nuevo Instructor</a>
            </div>
     </x-slot>
     

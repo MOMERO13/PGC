@@ -18,16 +18,16 @@ return new class extends Migration
             $table->unsignedBigInteger('usuario_id');
             $table->string('nombre');
             $table->string('apellidos');
-            $table->date('fecha_nacimiento');
+            $table->timestamp('fecha_nacimiento');
             $table->string('curp');
             $table->string('estado');
             $table->string('municipio');
             $table->integer('codigo_postal');
             $table->string('colonia');
             $table->string('calle');
-            $table->integer('numero_exterior')->nullable();
-            $table->integer('numero_interior')->nullable();
-            $table->integer('numero_telefono')->nullable();
+            $table->string('numero_exterior')->nullable();
+            $table->string('numero_interior')->nullable();
+            $table->string('numero_telefono')->nullable();
             $table->timestamps();
         });
     }

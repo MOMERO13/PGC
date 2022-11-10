@@ -52,7 +52,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('dependiente.create') }}"> Dependientes </a>
+                        <a class="nav-link" href="{{ route('dependiente.index') }}"> Dependientes </a>
                     </li>        
 
                     @endauth

@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('curso_id');
             $table->unsignedBigInteger('instructor_id');
+            $table->string('nombre');
             $table->timestamp('fecha_inicio')->useCurrent();
             $table->timestamp('fecha_fin')->useCurrent();
             $table->string('dias');

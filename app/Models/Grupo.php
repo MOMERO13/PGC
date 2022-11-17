@@ -14,6 +14,7 @@ class Grupo extends Model
     protected $fillable = [
         'curso_id',
         'instructor_id',
+        'nombre',
         'fecha_inicio',
         'fecha_fin',
         'dias',

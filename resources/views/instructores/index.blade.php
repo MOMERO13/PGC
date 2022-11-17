@@ -9,11 +9,10 @@
            </div>
     </x-slot>
     
-
     <table class="table">
         <thead>
             <tr>
-                <th>Nombre Completo</th>		
+                <th>Nombre Completo</th> 		
                 <th>RFC</th>
                 <th>Opciones</th>
             </tr>
@@ -25,7 +24,13 @@
                 <td>{{$item->nombre}} {{$item->apellidos}}</td>
               
                 <td>{{$item->rfc}}</td>
-                <td>--</td>
+                <td>
+                    <form action="{{ route('instructor.destroy',['instructor'=>$item->id]) }}" method="POST" >
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-outline-danger"> <i class="bi bi-9-circle">Eliminar</i></button>
+                    </form> 
+                </td>
             </tr>
             @empty
                <tr>

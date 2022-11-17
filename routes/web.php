@@ -14,7 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $data['cursos']=Curso::all();
+    return view('welcome',$data);
 });
 
 Auth::routes();

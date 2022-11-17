@@ -31,6 +31,7 @@
             <tr>
                 <td>{{$item->instructor->nombre}}</td>
                 <td>{{$item->curso->nombre}}</td>
+                <td>{{$item->nombre}}</td>
                 <td>{{$item->fecha_inicio->format("m-d-Y")}}</td>
                 <td>{{$item->fecha_fin->format("m-d-Y")}}</td>
                 <td>{{$item->dias}}</td>

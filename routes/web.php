@@ -36,3 +36,5 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/inscripcion/{grupo}/agregar',[App\Http\Controllers\InscripcionController::class, 'new'])->name('inscripcion.new');

@@ -45,6 +45,10 @@ class InscripcionController extends Controller
      */
     public function store(Request $request)
     {
+        $form=$request->except (["_token"]);
+       $grupo_id=$form['grupo_id'];
+       $grupo=Grupo::find($grupo_id); 
+       $form['curso_id']=$grupo->curso->id;
 
         //
     }

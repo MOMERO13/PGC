@@ -50,10 +50,17 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('grupo.index') }}"> Grupos </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('usuario.index') }}"> Usuarios </a>
+                    </li>
 
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('dependiente.index') }}"> Dependientes </a>
-                    </li>        
+                    </li>  
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('inscripcion.create') }}"> Inscripciones </a>
+                    </li>  
 
                     @endauth
 

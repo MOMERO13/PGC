@@ -28,7 +28,13 @@
                 <td>{{$item->curso->nombre}}</td>
                 <td>${{$item->costo_derechohabiente}}</td>
                 <td>${{$item->costo_publico}}</td>
-                <td>--</td>
+                <td>
+                    <form action="{{ route('costo.destroy',['costo'=>$item->id]) }}" method="POST" >
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-outline-danger"> <i class="bi bi-9-circle">Eliminar</i></button>
+                    </form> 
+                </td>
             </tr>
             @empty
                <tr>

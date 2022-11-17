@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('inscripciones', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('grupo_id');
+            $table->unsignedBigInteger('curso_id');
             $table->unsignedBigInteger('dependiente_id');
             $table->timestamps();
         });

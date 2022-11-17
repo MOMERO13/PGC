@@ -99,6 +99,13 @@ class GrupoController extends Controller
      */
     public function destroy(Grupo $grupo)
     {
-        //
+    
+        if ($grupo->delete()){
+            $msj='Grupo borrado exitosamente';
+        }else{
+            $msj='Ocurrio un error';
+        } 
+        return redirect()->route('grupo.index')->with('status',$msj);
+
     }
 }

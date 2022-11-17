@@ -14,7 +14,13 @@ class UsuarioController extends Controller
      */
     public function index()
     {
-        //
+        $data = [];
+
+        $users = User::all(); //SELECT * FROM users WHERE 1
+        $data['users'] = $users;
+    
+        return view('usuario.index', $data);;
+   
     }
 
     /**
@@ -80,6 +86,11 @@ class UsuarioController extends Controller
      */
     public function destroy(User $user)
     {
-        //
+        if ($user->delete()){
+            $msj='Usuario borrado exitosamente';
+        }else{
+            $msj='Ocurrio un error';
+        } 
+        return redirect()->route('usuario.index')->with('status',$msj);
     }
 }

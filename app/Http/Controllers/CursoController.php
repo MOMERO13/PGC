@@ -56,6 +56,9 @@ class CursoController extends Controller
      */
     public function show(Curso $curso)
     {
+        $data['curso']=$curso;
+        $data['grupos']=Grupo::where('curso_id',$curso->id)->orderBy('nombre')->get();
+        return view ('cursos.show',$data);
         //
     }
 

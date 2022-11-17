@@ -27,7 +27,13 @@ class InscripcionController extends Controller
      */
     public function create()
     {
-        
+        $dependientes = Dependiente::all();
+        $data['dependientes']=$dependientes;
+        $grupos = Grupo::all();
+        $data['grupos']=$grupos;
+        $cursos = Curso::all();
+        $data['cursos']=$cursos;
+        return view('inscripciones.create',$data);
         //
     }
 

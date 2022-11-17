@@ -91,6 +91,11 @@ class CostoController extends Controller
      */
     public function destroy(Costo $costo)
     {
-        //
+        if ($costo->delete()){
+            $msj='Costo borrado exitosamente';
+        }else{
+            $msj='Ocurrio un error';
+        } 
+        return redirect()->route('costo.index')->with('status',$msj);
     }
 }

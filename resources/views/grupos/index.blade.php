@@ -15,6 +15,7 @@
             <tr>
                 <th>Profesor</th>
                 <th>Curso</th>
+                <th>Grupo</th>
                 <th>Fecha de inicio</th>
                 <th>Fecha de fin</th>
                 <th>Dias</th>
@@ -28,7 +29,7 @@
         <tbody>
 
             @forelse ($grupos as $item)
-            <tr>
+             <tr>
                 <td>{{$item->instructor->nombre}}</td>
                 <td>{{$item->curso->nombre}}</td>
                 <td>{{$item->nombre}}</td>
@@ -39,9 +40,15 @@
                 <td>{{$item->hora_fin}}</td>
                 <td>{{$item->capacidad}}</td>
                 <td>{{$item->inscritos->count()}}</td>
-                <td> --</td>
-            </tr>
-            @empty
+                <td>
+                    <form action="{{ route('grupo.destroy',['grupo'=>$item->id]) }}" method="POST" >
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-outline-danger"> <i class="bi bi-9-circle">Eliminar</i></button>
+                    </form>    
+                </td>
+                </tr>
+             @empty
                <tr>
                 <td colspan="8">No hay grupos registrados</td>
                </tr> 

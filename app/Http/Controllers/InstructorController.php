@@ -89,6 +89,11 @@ class InstructorController extends Controller
      */
     public function destroy(Instructor $instructor)
     {
-        //
+        if ($instructor->delete()){
+            $msj='Instructor borrado exitosamente';
+        }else{
+            $msj='Ocurrio un error';
+        } 
+        return redirect()->route('instructor.index')->with('status',$msj);
     }
 }

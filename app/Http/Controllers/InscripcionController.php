@@ -49,7 +49,11 @@ class InscripcionController extends Controller
        $grupo_id=$form['grupo_id'];
        $grupo=Grupo::find($grupo_id); 
        $form['curso_id']=$grupo->curso->id;
-
+        
+       //dd($form);
+        $inscripcion=Inscripcion::create($form);
+  
+        return redirect()->route('home')->with('status','Inscripcion exitosa');
         //
     }
 
@@ -72,7 +76,6 @@ class InscripcionController extends Controller
      */
     public function edit(Inscripcion $inscripcion)
     {
-        //
     }
 
     /**

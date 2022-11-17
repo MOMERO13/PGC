@@ -5,7 +5,15 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+                <div class="card-header">Bienvenido  {{Auth::user()->name}}
+                    @if (Auth::user()->nivel==0)
+
+                       (Publico)
+                    @else
+                    (ES administrador)    
+
+                    @endif
+                </div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -14,14 +22,6 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
-                    @if (Auth::user()->nivel==0)
-
-
-                    @else
-                    ES administrador    
-
-                    @endif
                 </div>
             </div>
         </div>

@@ -93,6 +93,11 @@ class CursoController extends Controller
      */
     public function destroy(Curso $curso)
     {
-        //
+        if ($curso->delete()){
+            $msj='Curso borrado exitosamente';
+        }else{
+            $msj='Ocurrio un error';
+        } 
+        return redirect()->route('curso.index')->with('status',$msj);
     }
 }

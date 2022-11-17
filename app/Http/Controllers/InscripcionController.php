@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Inscripcion;
+use App\Models\Grupo;
+use App\Models\Curso;
+use App\Models\Dependiente;
 use Illuminate\Http\Request;
 
 class InscripcionController extends Controller

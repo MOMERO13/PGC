@@ -28,7 +28,15 @@
                 <td>{{$item->nombre}}</td>
                 <td>{{$item->objetivo}}</td>
                 <td>{{$item->descripcion}}</td>
-                <td> --</td>
+                <td>
+
+                    <a class="btn btn-outline-primary" href="{{route('curso.show',['curso'=>$item->id])}}" role="button">Inscribir</a>
+                    <form action="{{ route('curso.destroy',['curso'=>$item->id]) }}" method="POST" >
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-outline-danger"> <i class="bi bi-9-circle">Eliminar</i></button>
+                    </form> 
+                </td>
             </tr>
             @empty
                <tr>

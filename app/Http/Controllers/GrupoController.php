@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Grupo;
 use App\Models\Curso;
+use App\Models\Dependiente;
 use App\Models\Instructor;
 use Illuminate\Http\Request;
 
@@ -20,7 +21,7 @@ class GrupoController extends Controller
         $grupos = Grupo::all();
         $data['grupos']=$grupos;
         //dd($data);
-        return view('grupos.index',$data);
+        return view ('grupos.index',$data);
         
         //
     }
@@ -65,7 +66,10 @@ class GrupoController extends Controller
      */
     public function show(Grupo $grupo)
     {
-        //
+        $data['grupo']=$grupo;
+        $dependientes = Dependiente::all();
+        $data['dependientes']=$dependientes;
+        return view ('grupos.show',$data);
     }
 
     /**

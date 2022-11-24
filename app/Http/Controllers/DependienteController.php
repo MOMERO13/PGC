@@ -15,7 +15,12 @@ class DependienteController extends Controller
      */
     public function index()
     {
-        $dependientes=Auth::user()->dependientes;
+         if(Auth::user()->nivel==0){
+            $dependientes = Dependiente::all();
+        }else{
+            $dependientes = Auth::user()->dependientes;
+        }
+        
         //$dependientes=Dependiente::all();
         $redirigir=(count($dependientes)==0);
         //dd($redirigir);
@@ -95,6 +100,11 @@ class DependienteController extends Controller
      */
     public function destroy(Dependiente $dependiente)
     {
-        //
+        if ($dependiente->delete()){
+            $msj='Dependiente borrado exitosamente';
+        }else{
+            $msj='Ocurrio un error';
+        } 
+        return redirect()->route('dependiente.index')->with('status',$msj);
     }
 }

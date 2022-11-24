@@ -8,13 +8,14 @@
                 <div class="card-header">Bienvenido  {{Auth::user()->name}}
                     @if (Auth::user()->nivel==0)
 
-                       (Publico)
+                    (Es administrador)    
                     @else
-                    (ES administrador)    
-
+                       
+                    (Publico)
                     @endif
                 </div>
 
+                
                 <div class="card-body">
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">

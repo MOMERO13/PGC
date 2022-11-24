@@ -16,6 +16,7 @@
         
             <!-- Scripts -->
             @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+            <link href="{{asset('css/pgc.css')}}" rel="stylesheet">
             <script src="https://unpkg.com/imask"></script>
         </head>
 

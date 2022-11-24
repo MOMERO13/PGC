@@ -28,7 +28,7 @@
                     <form action="{{ route('instructor.destroy',['instructor'=>$item->id]) }}" method="POST" >
                         @csrf
                         @method('DELETE')
-                        <button type="submit" class="btn btn-outline-danger"> <i class="bi bi-9-circle">Eliminar</i></button>
+                        <button type="submit" class="btn btn-outline-danger">Eliminar <i class="bi bi-trash"></i> </button>
                     </form> 
                 </td>
             </tr>

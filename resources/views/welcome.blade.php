@@ -13,7 +13,7 @@
             <!-- Fonts -->
             <link rel="dns-prefetch" href="//fonts.gstatic.com">
             <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
-        
+
             <!-- Scripts -->
             @vite(['resources/sass/app.scss', 'resources/js/app.js'])
             <link href="{{asset('css/pgc.css')}}" rel="stylesheet">
@@ -44,11 +44,11 @@
 
             <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
                 
-                <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
+                <div class="text-center">
                     <h3>PGC</h3>
                 </div>
 
-                <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
+                <div class="nav justify-content-center">
                     <div class="card-group"> 
                         @foreach ($cursos as $item)
                         <div class="card bg-light mb-3" style="max-width: 20rem;">
@@ -56,9 +56,11 @@
                             <div class="card-body text-success">
                               <h5 class="card-title">{{$item->nombre}}</h5>
                               <p class="text-secondary">{{$item->objetivo}}</p>
-                            </div>
-                            <div class="card-footer bg-transparent border-success">{{$item->descripcion}} </div>
-                          </div>    
+                              </div>
+                            <div class="card-footer text-muted">
+                                <a href="{{route('curso.show',['curso'=>$item->id])}}" class="btn btn-primary">Inscribir</a>
+                              </div>
+                        </div>    
                         @endforeach
                         
                         

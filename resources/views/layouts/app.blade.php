@@ -16,7 +16,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    <link href="{{asset('css/pgc.css')}}" rel="stylesheet">
     <script src="https://unpkg.com/imask"></script>
+    
 </head>
 <body>
     <div id="app">

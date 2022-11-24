@@ -29,6 +29,6 @@ class Inscripcion extends Model
 
     public function inscrito()
     {
-        return $this->belongsTo(Dependiente::class);
+        return $this->belongsTo(Dependiente::class,'dependiente_id');
     }
 }

@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
+    <meta http-equiv="Content-Type" content="text/html">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -37,7 +38,7 @@
 
                     @auth
 
-
+                    @if (Auth::user()->nivel==0)
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('curso.index') }}"> Cursos </a>
                     </li>
@@ -56,13 +57,14 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('usuario.index') }}"> Usuarios </a>
                     </li>
-
+                    @endif
+                
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('dependiente.index') }}"> Dependientes </a>
                     </li>  
                     
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('inscripcion.create') }}"> Inscripciones </a>
+                        <a class="nav-link" href="{{ route('inscripcion.index') }}"> Inscripciones </a>
                     </li>  
 
                     @endauth

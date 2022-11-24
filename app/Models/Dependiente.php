@@ -23,7 +23,8 @@ class Dependiente extends Model
         'calle',
         'numero_exterior',
         'numero_interior',
-        'numero_telefono',		
+        'numero_telefono',
+        'nss',		
     ];
     protected $casts=[
         'fecha_nacimiento'=>'datetime:Y-m-d'

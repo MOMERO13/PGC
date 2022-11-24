@@ -30,17 +30,17 @@
                 <td>{{$item->descripcion}}</td>
                 <td>
 
-                    <a class="btn btn-outline-primary" href="{{route('curso.show',['curso'=>$item->id])}}" role="button">Inscribir</a>
+                
                     <form action="{{ route('curso.destroy',['curso'=>$item->id]) }}" method="POST" >
                         @csrf
                         @method('DELETE')
-                        <button type="submit" class="btn btn-outline-danger"> <i class="bi bi-9-circle">Eliminar</i></button>
+                        <button type="submit" class="btn btn-outline-danger">Eliminar <i class="bi bi-trash"></i> </button>
                     </form> 
                 </td>
             </tr>
             @empty
                <tr>
-                <td colspan="4">No hay cursos registrados</td>
+                <td colspan="5">No hay cursos registrados</td>
                </tr> 
             @endforelse
 

@@ -39,3 +39,5 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/inscripcion/{grupo}/agregar',[App\Http\Controllers\InscripcionController::class, 'new'])->name('inscripcion.new');
+
+Route::get('/pdf/ficha_pago/{inscripcion}',[App\Http\Controllers\PdfController::class, 'ficha_pago'])->name('pdf.ficha_pago');

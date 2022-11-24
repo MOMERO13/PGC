@@ -182,10 +182,52 @@
             </div>
         </div>
 
+        <script type="text/javascript">
+            function showContent() {
+                element = document.getElementById("content");
+                check = document.getElementById("check");
+                if (check.checked) {
+                    element.style.display='block';
+                }
+                else {
+                    element.style.display='none';
+                }
+            }
+            
+        </script>
+        <!--Esta afiliado al NSS check box o radio-->
+        
+        <div class="row mb-3">
+            <label for="numero_exterior" class="col-md-6 col-form-label text-md-end"> <h5>Esta afiliado al IMSS</h5> </label>
+
+
+            <label for="numero_interior" class="col-md-1 col-form-label text-md-end"><h5>Si</h5> </label>
+
+            <div class="col-md-3">
+                <input type="checkbox" name="check" id="check" value="1" onchange="javascript:showContent()"/>
+
+            </div>
+
+        </div>
+  
+
+        <div id="content" style="display: none;">
+            <div class="row mb-3">
+                <label for="nss" class="col-md-4 col-form-label text-md-end">Número de Seguro</label>
+    
+                <div class="col-md-6">
+                    <input id="nss" type="integer" class="form-control ">
+    
+                  
+                </div>
+            </div>
+          </div>
+        
+
+
         <div class="row mb-0">
             <div class="col-md-6 offset-md-4">
-                <button type="submit" class="btn btn-primary">Guardar
-                </button>
+                <button type="submit" class="btn btn-primary">Guardar</button>
             </div>
         </div>
     </form>

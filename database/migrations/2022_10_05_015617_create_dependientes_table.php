@@ -18,7 +18,7 @@ return new class extends Migration
             $table->unsignedBigInteger('usuario_id');
             $table->string('nombre');
             $table->string('apellidos');
-            $table->timestamp('fecha_nacimiento');
+            $table->datetime('fecha_nacimiento');
             $table->string('curp');
             $table->string('estado');
             $table->string('municipio');
@@ -28,6 +28,7 @@ return new class extends Migration
             $table->string('numero_exterior')->nullable();
             $table->string('numero_interior')->nullable();
             $table->string('numero_telefono')->nullable();
+            $table->string('nss')->nullable();
             $table->timestamps();
         });
     }

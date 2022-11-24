@@ -48,6 +48,7 @@
                         @method('DELETE')
                         <button type="submit" class="btn btn-outline-danger">Eliminar <i class="bi bi-trash"></i> </button>
                     </form>    
+                    @endif
                 </td>
                 </tr>
              @empty

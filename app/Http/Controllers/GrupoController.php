@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
 use App\Models\Grupo;
 use App\Models\Curso;
 use App\Models\Dependiente;
@@ -66,8 +67,18 @@ class GrupoController extends Controller
      */
     public function show(Grupo $grupo)
     {
+        //dd(Auth::user());
         $data['grupo']=$grupo;
-        $dependientes = Dependiente::all();
+        if (is_null(Auth::user())) {
+            return redirect()->route('login')->with('status','Inicia sesion para inscribirse');
+        }else{
+            if(Auth::user()->nivel==0){
+                $dependientes = Dependiente::all();
+            }else{
+                $dependientes = Auth::user()->dependientes;
+            }
+        }
+       
         $data['dependientes']=$dependientes;
         return view ('grupos.show',$data);
     }

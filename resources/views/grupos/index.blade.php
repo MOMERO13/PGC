@@ -41,6 +41,8 @@
                 <td>{{$item->capacidad}}</td>
                 <td>{{$item->inscritos->count()}}</td>
                 <td>
+                    
+                    @if ($item->inscritos->count()== 0 )
                     <form action="{{ route('grupo.destroy',['grupo'=>$item->id]) }}" method="POST" >
                         @csrf
                         @method('DELETE')

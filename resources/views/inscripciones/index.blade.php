@@ -12,7 +12,7 @@
                 <th>Curso</th>
                 <th>Grupo</th>
                 <th>Derechohabiente</th>
-                <th>Dias</th>	
+                <th>fecha de inicio del curso</th>	
                 <th>Opciones</th>
             </tr>
         </thead>
@@ -32,7 +32,7 @@
                     @endif
                         </td> 
 
-                    <td>{{$item->grupo->dias}}</td>
+                    <td>{{$item->grupo->fecha_inicio->format("m-d-Y")}}</td>
                     <td> 
                         <a class="btn btn-outline-primary" href="{{ route('pdf.ficha_pago',['inscripcion'=>$item->id]) }}" role="button">Ficha de pago</a>
                           <form action="{{ route('inscripcion.destroy',['inscripcion'=>$item->id]) }}" method="POST" >
